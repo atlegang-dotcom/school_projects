@@ -11,11 +11,16 @@ display: flex;
 <body>
 <div class="test1">
 <article class="testSibling">
-<p>testing with blocks</p>
+<p id="test"></p>
 </article>
 <article class="testSibling2">
 <p>testing the webpage to pdf converter</p>
 </article>
 </div>
 </body>
+<script>
+  fetch('https://atlegang-dotcom.github.io/school_projects/fonro.json').then((response) => response.json()).then((data) => {
+  document.getElementById('test').innerHTML = data;
+  })
+</script>
 </html>
