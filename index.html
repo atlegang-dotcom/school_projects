@@ -1,26 +1,28 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>testing</title>
-<style>
-.test1 {
-display: flex;
-}
-</style>
-</head>
-<body>
-<div class="test1">
-<article class="testSibling">
-<p id="test"></p>
-</article>
-<article class="testSibling2">
-<p>testing the webpage to pdf converter</p>
-</article>
-</div>
-</body>
-<script>
-  fetch('https://atlegang-dotcom.github.io/school_projects/fonro.json').then((response) => response.json()).then((data) => {
-  document.getElementById('test').innerHTML = data.name;
-  })
-</script>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>test to manipulate fetch() api</title>
+  </head>
+  <body>
+    <div id="test"></div>
+    <p id="test2"><p>
+  </body>
+  <script type="text/javascript">
+    fetch('https://data.mongodb-api.com/app/data-ezgjn/endpoint/data/beta/action/findOne', {
+      method: "POST",
+      headers: {
+        'content-type': 'application/json',
+        'Access-Control-Request-Headers': '*',
+        'api-key': 'nWUCuurgdvXVjh6chYpSet6khORUYZDqr3TaZIkZWb0nzNyQgOiRMvQ95aA7uzcE'
+      },
+      body: {
+        "collection":"agents",
+        "database":"fonro",
+        "dataSource":"Cluster0"
+      }
+    }).then((response) => response.json()).then((data) => {
+      document.getElementById('test2').innerHTML = data;
+    });
+  </script>
 </html>
