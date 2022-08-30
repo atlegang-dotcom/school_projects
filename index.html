@@ -11,7 +11,10 @@
   <script type="text/javascript">
     fetch('https://data.mongodb-api.com/app/data-ezgjn/endpoint/data/beta/action/findOne', {
       method: "POST",
+      mode: 'cors',
+      credentials: 'include',
       headers: {
+        'Access-Control-Allow-Origin': '*',
         'content-type': 'application/json',
         'Access-Control-Request-Headers': '*',
         'api-key': 'nWUCuurgdvXVjh6chYpSet6khORUYZDqr3TaZIkZWb0nzNyQgOiRMvQ95aA7uzcE'
