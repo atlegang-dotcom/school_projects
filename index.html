@@ -20,7 +20,7 @@ display: flex;
 </body>
 <script>
   fetch('https://atlegang-dotcom.github.io/school_projects/fonro.json').then((response) => response.json()).then((data) => {
-  document.getElementById('test').innerHTML = data;
+  document.getElementById('test').innerHTML = data.name;
   })
 </script>
 </html>
